@@ -1,0 +1,175 @@
+/* שפת עיצוב - הגדרות גלובליות */
+
+/* 1. פונטים */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap');
+
+:root {
+  /* 2. צבעים */
+  --primary: #007BFF;
+  --primary-dark: #0069d9;
+  --primary-light: #cce5ff;
+  --secondary: #F8F9FA;
+  --success: #28A745;
+  --success-light: #d4edda;
+  --danger: #DC3545;
+  --danger-light: #f8d7da;
+  --warning: #FFC107;
+  --warning-light: #fff3cd;
+  --text-dark: #343A40;
+  --text-muted: #6C757D;
+  --border-color: #dee2e6;
+  --light-gray: #F8F9FA;
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --hover-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  --transition-speed: 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+body {
+  font-family: 'Heebo', 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--text-dark);
+  line-height: 1.5;
+  background-color: var(--secondary);
+  transition: background-color var(--transition-speed);
+  background-image: url('../assets/login-bg.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: lighten;
+  background-color: rgba(255, 255, 255, 0.97); /* Very subtle background - more faded than login page */
+}
+
+/* 3. טיפוגרפיה */
+h1 {
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 1.5rem;
+  color: var(--text-dark);
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 22px;
+  margin-bottom: 1.25rem;
+  color: var(--text-dark);
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* 4. כפתורים */
+.btn {
+  font-family: 'Heebo', 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-speed);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--hover-shadow);
+}
+
+.btn-success {
+  background-color: var(--success);
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+  box-shadow: var(--hover-shadow);
+}
+
+.btn-danger {
+  background-color: var(--danger);
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+  box-shadow: var(--hover-shadow);
+}
+
+.btn-warning {
+  background-color: var(--warning);
+  color: var(--text-dark);
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+  transform: translateY(-2px);
+  box-shadow: var(--hover-shadow);
+}
+
+/* 5. כרטיסים ומיכלים */
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: all var(--transition-speed);
+}
+
+.card:hover {
+  box-shadow: var(--hover-shadow);
+  transform: translateY(-3px);
+}
+
+/* 6. אנימציות */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn var(--transition-speed) ease-in;
+}
+
+.slide-up {
+  animation: slideUp var(--transition-speed) ease-out;
+}
